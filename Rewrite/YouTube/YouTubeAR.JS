@@ -13,6 +13,8 @@ AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 #hostname = *.googlevideo.com, youtubei.googleapis.com
 youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/sultan1sa/Try-configure-/refs/heads/main/Script/Youtube/dist/youtube.request.preview.js
 youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/sultan1sa/Try-configure-/refs/heads/main/Script/Youtube/dist/youtube.response.preview.js,argument="{"lyricLang":"{{{歌词翻译语#SpotifyPremium
+# download request body
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/offline/get_download_action url script-analyze-echo-response https://raw.githubusercontent.com/osinx/sgmodule/download/Script/Youtube/dist/youtube.beta.js
 
 [Map Local]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="{}" status-code=200
