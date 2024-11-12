@@ -1,5 +1,5 @@
 /*
-脚本引用https://raw.githubusercontent.com/Yu9191/Rewrite/main/Github.js
+脚本引用https://raw.githubusercontent.com/sultan1sa/quanx/refs/heads/main/Rewrite/GitHub.js
 */
 /*
 GitHub 1.142.1
